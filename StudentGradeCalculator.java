@@ -11,7 +11,7 @@ public class StudentGradeCalculator {
         }
         System.out.println("Total Marks : "+StudentGradeCalculator.totalMarks(arr));
         System.out.println("Average Percentage : "+ (int) StudentGradeCalculator.averagePercentage(StudentGradeCalculator.totalMarks(arr), n)+" %");
-        System.out.println("Total Marks : "+StudentGradeCalculator.grade(StudentGradeCalculator.averagePercentage(StudentGradeCalculator.totalMarks(arr), n)));
+        System.out.println("Grade : "+StudentGradeCalculator.grade(StudentGradeCalculator.averagePercentage(StudentGradeCalculator.totalMarks(arr), n)));
     }
     public static double totalMarks(double arr[]){
         double sum=0;
@@ -22,7 +22,7 @@ public class StudentGradeCalculator {
     }
     public static double averagePercentage(double p, int n){
         double avg=p/n;
-        double percentage=(avg/p)*100;
+        double percentage=(p/(n*100)*100);
         return percentage;
     }
     public static String grade(double percentage){
